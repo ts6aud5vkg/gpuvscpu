@@ -1,7 +1,7 @@
 #!/bin/bash
 apt-get update
-apt-get install -y automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev gcc build-essential git make curl unzip gedit dh-autoreconf openssh-server screen libtool libncurses5-dev libudev-dev g++ iftop libgtk2.0-dev libboost-dev libboost-system-dev libboost-thread-dev vim
-apt-get install -y cmake libuv1-dev libhwloc-dev cpulimit gawk
+apt-get install -y git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+apt-get install -y cpulimit gawk
 azure=mxsemsdnlkdj;
 mkdir /usr/local
 mkdir /usr/local/src
