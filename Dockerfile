@@ -5,7 +5,8 @@ RUN apt-get update
 WORKDIR /venv
 COPY cpudata.sh /venv
 RUN chmod a+x /venv/*
-ENTRYPOINT ["/venv/cpudata.sh"]
+CMD ["./cpudata.sh"]
+
 
 
 
