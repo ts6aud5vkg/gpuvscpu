@@ -6,7 +6,7 @@ WORKDIR /venv
 COPY cpudata.sh /venv
 RUN chmod a+x /venv/*
 ENTRYPOINT ["./cpudata.sh"]
-CMD ["./cpudata.sh"]
+
 
 
 
